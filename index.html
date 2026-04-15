@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yograj Traders – Industrial & Agriculture Products, Rajkot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0a1628;
+      --steel: #1c2e4a;
+      --gold: #c9922a;
+      --gold-light: #f0b84a;
+      --cream: #f5f0e8;
+      --white: #ffffff;
+      --gray: #8a9ab5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ── */
+    header {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,146,42,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(28,46,74,0.8) 0%, transparent 60%),
+        linear-gradient(160deg, #0a1628 0%, #1c2e4a 50%, #0a1628 100%);
+    }
+
+    .grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201,146,42,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,146,42,0.07) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridShift 20s linear infinite;
+    }
+
+    @keyframes gridShift {
+      0% { background-position: 0 0; }
+      100% { background-position: 60px 60px; }
+    }
+
+    .hero-badge {
+      position: relative;
+      display: inline-block;
+      background: rgba(201,146,42,0.15);
+      border: 1px solid rgba(201,146,42,0.4);
+      color: var(--gold-light);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-title {
+      position: relative;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.5rem, 12vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: 0.03em;
+      color: var(--white);
+      animation: fadeUp 0.8s ease 0.1s both;
+    }
+
+    .hero-title span {
+      color: var(--gold);
+      display: block;
+    }
+
+    .hero-sub {
+      position: relative;
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: var(--gray);
+      max-width: 560px;
+      line-height: 1.7;
+      margin: 20px auto 36px;
+      font-weight: 300;
+      animation: fadeUp 0.8s ease 0.2s both;
+    }
+
+    .hero-cta {
+      position: relative;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeUp 0.8s ease 0.3s both;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 13px 32px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 2px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    .scroll-line {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: var(--gray);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      animation: fadeUp 1s ease 0.6s both;
+    }
+
+    .scroll-line::after {
+      content: '';
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s ease infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 1; transform: scaleY(1); }
+      50% { opacity: 0.3; transform: scaleY(0.5); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: rgba(10,22,40,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,146,42,0.15);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.05em;
+      color: var(--white);
+    }
+
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── STATS ── */
+    .stats-bar {
+      background: var(--gold);
+      padding: 22px 40px;
+      display: flex;
+      justify-content: center;
+      gap: clamp(30px, 6vw, 80px);
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+      color: var(--navy);
+    }
+
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.75;
+      margin-top: 2px;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 90px 20px; }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-tag {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      margin-bottom: 18px;
+    }
+
+    .section-desc {
+      color: var(--gray);
+      font-size: 1rem;
+      line-height: 1.8;
+      max-width: 560px;
+      font-weight: 300;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--steel); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+      height: 340px;
+      border: 1px solid rgba(201,146,42,0.3);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(201,146,42,0.08), rgba(10,22,40,0.9));
+    }
+
+    .about-visual-inner {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 5rem;
+      color: rgba(201,146,42,0.15);
+      letter-spacing: 0.1em;
+      text-align: center;
+      line-height: 1;
+      padding: 20px;
+    }
+
+    .about-visual::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--gold);
+    }
+
+    .about-features {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .about-feature {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.95rem;
+      color: var(--cream);
+      font-weight: 400;
+    }
+
+    .about-feature::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── PRODUCTS ── */
+    #products { background: var(--navy); }
+
+    .products-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2px;
+    }
+
+    .product-card {
+      background: var(--steel);
+      padding: 36px 28px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover { transform: translateY(-4px); z-index: 1; }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover::before { transform: scaleX(1); }
+
+    .product-icon {
+      font-size: 2.5rem;
+      margin-bottom: 18px;
+    }
+
+    .product-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.03em;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .product-desc {
+      font-size: 0.88rem;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .product-num {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      color: rgba(201,146,42,0.08);
+      line-height: 1;
+    }
+
+    .blowers-parent-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 4px;
+    }
+
+    .blowers-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .blowers-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    .product-sub-tag {
+      display: inline-block; margin-top: 14px; font-size: 0.72rem;
+      font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); background: rgba(201,146,42,0.1);
+      border: 1px solid rgba(201,146,42,0.25); padding: 4px 10px; border-radius: 2px;
+    }
+
+    /* ── BLOWERS MODAL ── */
+    .blowers-modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 500;
+      background: rgba(6,14,26,0.88); backdrop-filter: blur(6px);
+      align-items: center; justify-content: center;
+      padding: 20px; overflow-y: auto;
+    }
+    .blowers-modal-overlay.open { display: flex; }
+
+    .blowers-modal {
+      position: relative; background: var(--steel);
+      border: 1px solid rgba(201,146,42,0.3); border-radius: 6px;
+      padding: 40px; max-width: 960px; width: 100%;
+      max-height: 90vh; overflow-y: auto;
+      animation: modalIn 0.3s ease both;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(30px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .blowers-modal-close {
+      position: absolute; top: 16px; right: 20px;
+      background: rgba(201,146,42,0.12); border: 1px solid rgba(201,146,42,0.3);
+      color: var(--gold-light); font-size: 1rem;
+      width: 36px; height: 36px; border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .blowers-modal-close:hover { background: rgba(201,146,42,0.25); }
+    .product-card--clickable { cursor: pointer; }
+    .product-card--clickable:hover .product-sub-tag { background: rgba(201,146,42,0.2); }
+
+    /* ── BLOWERS CATALOGUE ── */
+    .bm-header { margin-bottom: 16px; }
+    .bm-breadcrumb { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .bm-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: 0.04em; color: var(--white); }
+    .bm-subtitle { font-size: 0.85rem; color: var(--gray); margin-top: 6px; }
+
+    .bm-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+    .bm-tab {
+      background: rgba(201,146,42,0.08); border: 1px solid rgba(201,146,42,0.25);
+      color: var(--gray); font-family: 'Barlow', sans-serif;
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 10px 20px; border-radius: 2px;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .bm-tab:hover { border-color: var(--gold); color: var(--gold-light); }
+    .bm-tab.active { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+
+    .bm-spec-bar {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;
+      padding: 12px 16px; background: rgba(201,146,42,0.07);
+      border-left: 3px solid var(--gold); border-radius: 2px;
+    }
+    .bm-spec-bar span { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.07em; color: var(--cream); }
+
+    .bm-product-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 14px;
+    }
+    .bm-product-card {
+      background: rgba(10,22,40,0.6); border: 1px solid rgba(201,146,42,0.15);
+      border-radius: 4px; overflow: hidden; transition: border-color 0.2s, transform 0.2s;
+    }
+    .bm-product-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .bm-img-placeholder {
+      width: 100%; aspect-ratio: 1; background: rgba(28,46,74,0.8);
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 6px; color: var(--gray);
+      border-bottom: 1px solid rgba(201,146,42,0.1);
+    }
+    .bm-img-placeholder span { font-size: 2rem; opacity: 0.4; }
+    .bm-img-placeholder small { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.5; }
+    .bm-product-info { padding: 10px 12px; }
+    .bm-product-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.04em; color: var(--white); margin-bottom: 4px; }
+    .bm-product-rate { font-size: 0.75rem; color: var(--gray); }
+    .bm-rate-val { color: var(--gold-light); font-weight: 600; }
+
+    .bm-subtabs { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .bm-subtab {
+      background: rgba(10,22,40,0.5); border: 1px solid rgba(201,146,42,0.2);
+      color: var(--gray); font-family: 'Barlow', sans-serif;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.07em;
+      text-transform: uppercase; padding: 8px 18px; border-radius: 2px;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .bm-subtab:hover { border-color: var(--gold); color: var(--gold-light); }
+    .bm-subtab.active { background: rgba(201,146,42,0.18); border-color: var(--gold); color: var(--gold-light); }
+
+    .bm-rpm-section { margin-bottom: 28px; }
+    .bm-rpm-heading {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem;
+      letter-spacing: 0.05em; color: var(--gold-light); margin-bottom: 14px;
+      padding-bottom: 8px; border-bottom: 1px solid rgba(201,146,42,0.2);
+    }
+
+    @media (max-width: 768px) {
+      .blowers-modal { padding: 24px 18px; }
+      .bm-product-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+      .bm-tab { font-size: 0.75rem; padding: 8px 12px; }
+    }
+
+    /* ── WHY ── */
+    #why { background: var(--steel); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .why-card {
+      padding: 30px;
+      border: 1px solid rgba(201,146,42,0.15);
+      border-radius: 4px;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .why-card:hover {
+      border-color: var(--gold);
+      background: rgba(201,146,42,0.05);
+    }
+
+    .why-icon { font-size: 2rem; margin-bottom: 14px; }
+
+    .why-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.03em;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .why-text {
+      font-size: 0.88rem;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--navy); }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(201,146,42,0.12);
+      border: 1px solid rgba(201,146,42,0.3);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .contact-value {
+      font-size: 1rem;
+      color: var(--cream);
+      font-weight: 400;
+    }
+
+    .contact-value a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-value a:hover { color: var(--gold); }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+
+    .form-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .form-input, .form-textarea {
+      background: var(--steel);
+      border: 1px solid rgba(201,146,42,0.2);
+      border-radius: 2px;
+      color: var(--white);
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.95rem;
+      padding: 12px 16px;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-input:focus, .form-textarea:focus { border-color: var(--gold); }
+
+    .form-textarea { resize: vertical; min-height: 120px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060e1a;
+      padding: 30px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-top: 1px solid rgba(201,146,42,0.15);
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-logo span { color: var(--gold); }
+
+    .footer-text {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    .footer-location {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    /* ── DIVIDER ── */
+    .gold-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 18px 0 24px;
+    }
+
+    /* ── WHATSAPP FLOAT ── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      padding: 13px 20px 13px 16px;
+      border-radius: 50px;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: fadeUp 1s ease 0.8s both;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.55);
+    }
+
+    .whatsapp-float svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    .whatsapp-pulse {
+      position: absolute;
+      top: -4px; right: -4px;
+      width: 12px; height: 12px;
+      background: #ff4444;
+      border-radius: 50%;
+      border: 2px solid #25D366;
+      animation: pulse 2s ease infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.7; }
+    }
+
+    /* ── MAP ── */
+    .map-wrapper {
+      margin-top: 40px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid rgba(201,146,42,0.25);
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 240px;
+      display: block;
+      filter: grayscale(30%) brightness(0.9);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .about-grid, .contact-wrapper { grid-template-columns: 1fr; }
+      .about-visual { height: 200px; }
+      .form-row { grid-template-columns: 1fr; }
+      section { padding: 60px 20px; }
+      .stats-bar { padding: 18px 20px; gap: 20px; }
+      .whatsapp-float { bottom: 20px; right: 20px; padding: 12px 16px 12px 14px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">YOGRAJ <span>TRADERS</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header>
+  <div class="grid-bg"></div>
+  <div class="hero-badge">📍 ANYTHING FROM RAJKOT</div>
+  <h1 class="hero-title">
+    YOGRAJ
+    <span>TRADERS</span>
+  </h1>
+  <p class="hero-sub">
+    Your trusted trading partner for Industrial Products, Agriculture Pipe Fittings, Wood Working Machinery & Architectural Hardware — manufactured in Rajkot, delivered across India.
+  </p>
+  <div class="hero-cta">
+    <a href="#products" class="btn-primary">Explore Products</a>
+    <a href="#contact" class="btn-outline">Get In Touch</a>
+  </div>
+  <div class="scroll-line">Scroll</div>
+</header>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-num">4+</div>
+    <div class="stat-label">Product Categories</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">PAN</div>
+    <div class="stat-label">India Coverage</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Made in Rajkot</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">B2B</div>
+    <div class="stat-label">Trade Ready</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-visual-inner">RAJKOT<br>MADE<br>INDIA<br>SOLD</div>
+      </div>
+      <div>
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-title">BUILT ON TRUST, DRIVEN BY QUALITY</h2>
+        <div class="gold-divider"></div>
+        <p class="section-desc">
+          Yograj Traders is a Rajkot-based trading company dealing in a wide range of industrial and agricultural products. We source the finest manufactured goods from Rajkot — the industrial heartland of Gujarat — and supply them to businesses and buyers across India.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">Rajkot manufactured products of highest quality</div>
+          <div class="about-feature">Pan India supply chain network</div>
+          <div class="about-feature">Industrial, Agricultural & Architectural solutions</div>
+          <div class="about-feature">Reliable, responsive & relationship-driven</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="container">
+    <div class="products-header">
+      <div>
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">OUR PRODUCT RANGE</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <p class="section-desc" style="max-width:300px; font-size:0.9rem;">
+        A diverse portfolio of products catering to industrial, agricultural, woodworking, and architectural sectors.
+      </p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card" id="industrialCard">
+        <div class="product-num">01</div>
+        <div class="product-icon">⚙️</div>
+        <div class="product-name">Industrial Products</div>
+        <p class="product-desc">High-performance industrial components and equipment designed for manufacturing and production applications across sectors.</p>
+        <a href="blowers.html" target="_blank" class="blowers-btn">💨 Blowers Catalogue →</a>
+      </div>
+      <div class="product-card">
+        <div class="product-num">02</div>
+        <div class="product-icon">🌾</div>
+        <div class="product-name">Agriculture Pipe Fittings</div>
+        <p class="product-desc">Durable and reliable pipe fittings for agricultural irrigation systems — built to withstand India's diverse farming conditions.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-num">03</div>
+        <div class="product-icon">🪵</div>
+        <div class="product-name">Wood Working Machinery</div>
+        <p class="product-desc">Precision woodworking machines for furniture makers, carpenters, and large-scale wood processing industries.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-num">04</div>
+        <div class="product-icon">🏗️</div>
+        <div class="product-name">Architectural Hardware</div>
+        <p class="product-desc">Premium hardware solutions for construction and design — hinges, handles, locks, and fittings for modern and traditional builds.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BLOWERS MODAL -->
+<div class="blowers-modal-overlay" id="blowersModal">
+  <div class="blowers-modal">
+    <button class="blowers-modal-close" id="blowersClose">✕</button>
+
+    <!-- Modal Header -->
+    <div class="bm-header">
+      <div class="bm-breadcrumb">Industrial Products &rsaquo;</div>
+      <h2 class="bm-title">💨 BLOWERS</h2>
+      <p class="bm-subtitle">Select a category to explore the full range</p>
+    </div>
+    <div class="gold-divider" style="margin: 0 0 28px;"></div>
+
+    <!-- Tab Buttons -->
+    <div class="bm-tabs">
+      <button class="bm-tab active" data-tab="electric">⚡ Electric Blower</button>
+      <button class="bm-tab" data-tab="hand">✋ Hand Blower</button>
+      <button class="bm-tab" data-tab="fab">🏭 Fabrication Body Blower</button>
+    </div>
+
+    <!-- ── TAB: ELECTRIC ── -->
+    <div class="bm-panel" id="tab-electric">
+      <div class="bm-spec-bar">
+        <span>🔩 Aluminium Body</span><span>🔌 Copper Winding</span><span>🌀 Aluminium Fan</span><span>🏗️ CI Stand</span>
+      </div>
+      <div class="bm-product-grid">
+        <div class="bm-product-card">
+          <div class="bm-img-placeholder">
+            <span>📷</span><small>Add Image</small>
+          </div>
+          <div class="bm-product-info">
+            <div class="bm-product-name">Blower No. 18</div>
+            <div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div>
+          </div>
+        </div>
+        <div class="bm-product-card">
+          <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+          <div class="bm-product-info">
+            <div class="bm-product-name">Blower No. 25</div>
+            <div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div>
+          </div>
+        </div>
+        <div class="bm-product-card">
+          <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+          <div class="bm-product-info">
+            <div class="bm-product-name">Blower No. 35</div>
+            <div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div>
+          </div>
+        </div>
+        <div class="bm-product-card">
+          <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+          <div class="bm-product-info">
+            <div class="bm-product-name">Blower No. 50</div>
+            <div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div>
+          </div>
+        </div>
+        <div class="bm-product-card">
+          <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+          <div class="bm-product-info">
+            <div class="bm-product-name">Blower No. 60</div>
+            <div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div>
+          </div>
+        </div>
+        <div class="bm-product-card">
+          <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+          <div class="bm-product-info">
+            <div class="bm-product-name">Blower No. 70</div>
+            <div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TAB: HAND ── -->
+    <div class="bm-panel" id="tab-hand" style="display:none;">
+      <div class="bm-spec-bar">
+        <span>🔩 Aluminium Body</span><span>⚙️ Helical Gear Box</span><span>🌀 Aluminium Fan</span><span>🏗️ CI Stand</span>
+      </div>
+      <div class="bm-product-grid">
+        <div class="bm-product-card">
+          <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+          <div class="bm-product-info">
+            <div class="bm-product-name">Blower No. 18</div>
+            <div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div>
+          </div>
+        </div>
+        <div class="bm-product-card">
+          <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+          <div class="bm-product-info">
+            <div class="bm-product-name">Blower No. 25</div>
+            <div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div>
+          </div>
+        </div>
+        <div class="bm-product-card">
+          <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+          <div class="bm-product-info">
+            <div class="bm-product-name">Blower No. 35</div>
+            <div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TAB: FABRICATION ── -->
+    <div class="bm-panel" id="tab-fab" style="display:none;">
+      <div class="bm-spec-bar">
+        <span>🔧 MS Sheet Body</span><span>🌀 MS Sheet Fan</span><span>⚡ Available With Motor (Single / Three Phase)</span><span>🔩 Without Motor Option</span>
+      </div>
+
+      <!-- Sub-tabs: Pressure / Suction -->
+      <div class="bm-subtabs">
+        <button class="bm-subtab active" data-subtab="pressure">🔴 Pressure Blower</button>
+        <button class="bm-subtab" data-subtab="suction">🔵 Suction Blower</button>
+      </div>
+
+      <!-- PRESSURE BLOWER -->
+      <div class="bm-subpanel" id="subtab-pressure">
+        <div class="bm-product-grid">
+          <div class="bm-product-card">
+            <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+            <div class="bm-product-info"><div class="bm-product-name">0.5 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div>
+          </div>
+          <div class="bm-product-card">
+            <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+            <div class="bm-product-info"><div class="bm-product-name">1.0 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div>
+          </div>
+          <div class="bm-product-card">
+            <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+            <div class="bm-product-info"><div class="bm-product-name">1.5 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div>
+          </div>
+          <div class="bm-product-card">
+            <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+            <div class="bm-product-info"><div class="bm-product-name">2.0 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div>
+          </div>
+          <div class="bm-product-card">
+            <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+            <div class="bm-product-info"><div class="bm-product-name">3.0 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div>
+          </div>
+          <div class="bm-product-card">
+            <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+            <div class="bm-product-info"><div class="bm-product-name">5.0 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div>
+          </div>
+          <div class="bm-product-card">
+            <div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div>
+            <div class="bm-product-info"><div class="bm-product-name">7.5 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUCTION BLOWER -->
+      <div class="bm-subpanel" id="subtab-suction" style="display:none;">
+        <!-- 2880 RPM -->
+        <div class="bm-rpm-section">
+          <div class="bm-rpm-heading">⚙️ 2880 RPM Suction Blower</div>
+          <div class="bm-product-grid">
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">0.5 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1.0 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1.5 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">2.0 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">3.0 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">5.0 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">7.5 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          </div>
+        </div>
+        <!-- 1440 RPM -->
+        <div class="bm-rpm-section">
+          <div class="bm-rpm-heading">⚙️ 1440 RPM Suction Blower</div>
+          <div class="bm-product-grid">
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">0.5 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1.0 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1.5 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">2.0 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">3.0 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">5.0 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+            <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">7.5 HP</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<section id="why">
+  <div class="container">
+    <span class="section-tag">Why Choose Us</span>
+    <h2 class="section-title">THE YOGRAJ ADVANTAGE</h2>
+    <div class="gold-divider"></div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🏭</div>
+        <div class="why-title">Rajkot Origin</div>
+        <p class="why-text">All products sourced directly from Rajkot — Gujarat's manufacturing powerhouse — ensuring authentic quality and competitive pricing.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚚</div>
+        <div class="why-title">Pan India Reach</div>
+        <p class="why-text">We supply to buyers and businesses across all states in India with reliable logistics and timely delivery.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <div class="why-title">Trusted Relationships</div>
+        <p class="why-text">We build long-term partnerships with our clients based on transparency, consistency, and fair trade practices.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📦</div>
+        <div class="why-title">Diverse Portfolio</div>
+        <p class="why-text">From agriculture to architecture — one supplier for multiple product categories, simplifying your procurement process.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div>
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">LET'S DO BUSINESS</h2>
+        <div class="gold-divider"></div>
+        <p class="section-desc" style="margin-bottom:36px;">
+          Interested in our products or want a bulk quote? Reach out to us directly. We respond fast.
+        </p>
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Mobile</div>
+            <div class="contact-value">
+              <a href="tel:9426719287">+91 94267 19287</a><br>
+              <a href="tel:9265653276">+91 92656 53276</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">
+              <a href="/cdn-cgi/l/email-protection#1a777b6e7b76737b706c5a7d777b737634797577"><span class="__cf_email__" data-cfemail="c2afa3b6a3aeaba3a8b482a5afa3abaeeca1adaf">[email&#160;protected]</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Yograj Traders<br>11-A, R.K. Nagar<br>14, Manhar Plot<br>Rajkot – 360002<br>Gujarat, India</div>
+          </div>
+        </div>
+
+        <div class="map-wrapper">
+          <iframe
+            src="https://maps.google.com/maps?q=Yograj+Traders+Rajkot+Gujarat+India&output=embed"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+      </div>
+
+      <div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input class="form-input" type="text" placeholder="Full Name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone</label>
+              <input class="form-input" type="tel" placeholder="+91 XXXXX XXXXX" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" placeholder="your@email.com (optional)" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Product Interest</label>
+            <input class="form-input" type="text" placeholder="e.g. Agriculture Pipe Fittings" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Tell us about your requirement..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%; font-size:1rem; padding:16px;">
+            Send Enquiry →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919265653276?text=Hello%2C%20I%20am%20interested%20in%20your%20products.%20Please%20share%20more%20details." class="whatsapp-float" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  Chat on WhatsApp
+  <span class="whatsapp-pulse"></span>
+</a>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">YOGRAJ <span>TRADERS</span></div>
+  <div class="footer-text">© 2025 Yograj Traders. All rights reserved.</div>
+  <div class="footer-location">📍 Rajkot, Gujarat · Pan India</div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function switchTab(tabId) {
+    document.querySelectorAll('.bm-panel').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.bm-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + tabId).style.display = 'block';
+    document.querySelector('[data-tab="' + tabId + '"]').classList.add('active');
+  }
+
+  function switchSubTab(tabId) {
+    document.querySelectorAll('.bm-subpanel').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.bm-subtab').forEach(b => b.classList.remove('active'));
+    document.getElementById('subtab-' + tabId).style.display = 'block';
+    document.querySelector('[data-subtab="' + tabId + '"]').classList.add('active');
+  }
+
+  function openBlowers() {
+    document.getElementById('blowersModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBlowers() {
+    document.getElementById('blowersModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('industrialCard').addEventListener('click', openBlowers);
+    document.getElementById('blowersClose').addEventListener('click', closeBlowers);
+    document.getElementById('blowersModal').addEventListener('click', function(e) {
+      if (e.target === this) closeBlowers();
+    });
+    document.querySelectorAll('.bm-tab').forEach(function(btn) {
+      btn.addEventListener('click', function() { switchTab(this.dataset.tab); });
+    });
+    document.querySelectorAll('.bm-subtab').forEach(function(btn) {
+      btn.addEventListener('click', function() { switchSubTab(this.dataset.subtab); });
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeBlowers();
+  });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.textContent = '✓ Enquiry Sent!';
+    btn.style.background = '#2a7a4a';
+    setTimeout(() => {
+      btn.textContent = 'Send Enquiry →';
+      btn.style.background = '';
+      e.target.reset();
+    }, 3000);
+  }
+
+  // Scroll-reveal animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.style.opacity = '1';
+        el.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.product-card, 
