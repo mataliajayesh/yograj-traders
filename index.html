@@ -897,11 +897,12 @@
         <p class="product-desc">High-performance industrial components and equipment designed for manufacturing and production applications across sectors.</p>
         <a href="blowers.html" target="_blank" class="blowers-btn">💨 Blowers Catalogue →</a>
       </div>
-      <div class="product-card">
+      <div class="product-card product-card--clickable" id="agricultureCard">
         <div class="product-num">02</div>
         <div class="product-icon">🌾</div>
         <div class="product-name">Agriculture Pipe Fittings</div>
         <p class="product-desc">Durable and reliable pipe fittings for agricultural irrigation systems — built to withstand India's diverse farming conditions.</p>
+        <span class="blowers-btn" style="display:inline-block; margin-top:14px; cursor:pointer;">🔵 Ball Valve Catalogue →</span>
       </div>
       <div class="product-card">
         <div class="product-num">03</div>
@@ -1102,6 +1103,136 @@
 
   </div>
 </div>
+<!-- BALL VALVE MODAL -->
+<div class="blowers-modal-overlay" id="ballvalveModal">
+  <div class="blowers-modal">
+    <button class="blowers-modal-close" id="ballvalveClose">✕</button>
+
+    <!-- Modal Header -->
+    <div class="bm-header">
+      <div class="bm-breadcrumb">Agriculture Pipe Fittings &rsaquo;</div>
+      <h2 class="bm-title">🔵 BALL VALVES</h2>
+      <p class="bm-subtitle">Select a category to explore the full range</p>
+    </div>
+    <div class="gold-divider" style="margin: 0 0 28px;"></div>
+
+    <!-- Tab Buttons -->
+    <div class="bv-tabs">
+      <button class="bm-tab active" data-bvtab="pvc">🟦 PVC Ball Valve</button>
+      <button class="bm-tab" data-bvtab="brass">🟡 Brass Ball Valve</button>
+      <button class="bm-tab" data-bvtab="cpvc">🟠 CPVC Ball Valve</button>
+      <button class="bm-tab" data-bvtab="hdpe">⬛ HDPE Ball Valve</button>
+    </div>
+
+    <!-- ── TAB: PVC ── -->
+    <div class="bv-panel" id="bvtab-pvc">
+      <div class="bm-spec-bar">
+        <span>🧪 PVC Material</span><span>💧 For Irrigation & Water Supply</span><span>🌡️ Cold Water Use</span><span>🔩 BSP / Socket End</span>
+      </div>
+      <div class="bm-product-grid">
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">¾ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1¼ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">2 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">2½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">3 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">4 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+      </div>
+    </div>
+
+    <!-- ── TAB: BRASS ── -->
+    <div class="bv-panel" id="bvtab-brass" style="display:none;">
+      <div class="bm-spec-bar">
+        <span>🪙 Brass Body</span><span>💪 High Pressure Rated</span><span>🔥 Hot &amp; Cold Water</span><span>🔩 Threaded / Screwed End</span>
+      </div>
+
+      <!-- Sub-tabs: Single Piece / Two Piece / Three Piece -->
+      <div class="bv-subtabs">
+        <button class="bm-subtab active" data-bvsubtab="brass-single">Single Piece</button>
+        <button class="bm-subtab" data-bvsubtab="brass-two">Two Piece</button>
+        <button class="bm-subtab" data-bvsubtab="brass-three">Three Piece</button>
+      </div>
+
+      <!-- Single Piece -->
+      <div class="bv-subpanel" id="bvsubtab-brass-single">
+        <div class="bm-product-grid">
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">¾ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1¼ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">2 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        </div>
+      </div>
+      <!-- Two Piece -->
+      <div class="bv-subpanel" id="bvsubtab-brass-two" style="display:none;">
+        <div class="bm-product-grid">
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">¾ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1¼ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">2 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">2½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">3 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        </div>
+      </div>
+      <!-- Three Piece -->
+      <div class="bv-subpanel" id="bvsubtab-brass-three" style="display:none;">
+        <div class="bm-product-grid">
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">¾ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1¼ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">2 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">2½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">3 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+          <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">4 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TAB: CPVC ── -->
+    <div class="bv-panel" id="bvtab-cpvc" style="display:none;">
+      <div class="bm-spec-bar">
+        <span>🔶 CPVC Material</span><span>🔥 Hot &amp; Cold Water</span><span>🌡️ Up to 93°C</span><span>🔩 Socket / Threaded End</span>
+      </div>
+      <div class="bm-product-grid">
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">¾ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1¼ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">2 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">2½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">3 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+      </div>
+    </div>
+
+    <!-- ── TAB: HDPE ── -->
+    <div class="bv-panel" id="bvtab-hdpe" style="display:none;">
+      <div class="bm-spec-bar">
+        <span>⬛ HDPE Material</span><span>💧 Underground &amp; Irrigation Use</span><span>💪 High Pressure Rated</span><span>🔩 Butt Fusion / Flanged End</span>
+      </div>
+      <div class="bm-product-grid">
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">¾ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1¼ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">1½ inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">2 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">3 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">4 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+        <div class="bm-product-card"><div class="bm-img-placeholder"><span>📷</span><small>Add Image</small></div><div class="bm-product-info"><div class="bm-product-name">6 inch</div><div class="bm-product-rate">Rate: <span class="bm-rate-val">Contact for Price</span></div></div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <section id="why">
   <div class="container">
     <span class="section-tag">Why Choose Us</span>
@@ -1235,18 +1366,19 @@
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  /* ── BLOWERS MODAL ── */
   function switchTab(tabId) {
-    document.querySelectorAll('.bm-panel').forEach(p => p.style.display = 'none');
-    document.querySelectorAll('.bm-tab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#blowersModal .bm-panel').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('#blowersModal .bm-tab').forEach(b => b.classList.remove('active'));
     document.getElementById('tab-' + tabId).style.display = 'block';
-    document.querySelector('[data-tab="' + tabId + '"]').classList.add('active');
+    document.querySelector('#blowersModal [data-tab="' + tabId + '"]').classList.add('active');
   }
 
   function switchSubTab(tabId) {
-    document.querySelectorAll('.bm-subpanel').forEach(p => p.style.display = 'none');
-    document.querySelectorAll('.bm-subtab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#blowersModal .bm-subpanel').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('#blowersModal .bm-subtab').forEach(b => b.classList.remove('active'));
     document.getElementById('subtab-' + tabId).style.display = 'block';
-    document.querySelector('[data-subtab="' + tabId + '"]').classList.add('active');
+    document.querySelector('#blowersModal [data-subtab="' + tabId + '"]').classList.add('active');
   }
 
   function openBlowers() {
@@ -1259,22 +1391,67 @@
     document.body.style.overflow = '';
   }
 
+  /* ── BALL VALVE MODAL ── */
+  function switchBvTab(tabId) {
+    document.querySelectorAll('#ballvalveModal .bv-panel').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('#ballvalveModal .bm-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById('bvtab-' + tabId).style.display = 'block';
+    document.querySelector('#ballvalveModal [data-bvtab="' + tabId + '"]').classList.add('active');
+    // Reset subtabs inside this panel
+    document.querySelectorAll('#bvtab-' + tabId + ' .bv-subpanel').forEach((p, i) => p.style.display = i === 0 ? 'block' : 'none');
+    document.querySelectorAll('#bvtab-' + tabId + ' .bm-subtab').forEach((b, i) => { b.classList.remove('active'); if (i === 0) b.classList.add('active'); });
+  }
+
+  function switchBvSubTab(tabId) {
+    var panel = document.getElementById('bvsubtab-' + tabId);
+    if (!panel) return;
+    var parent = panel.closest('.bv-panel');
+    parent.querySelectorAll('.bv-subpanel').forEach(p => p.style.display = 'none');
+    parent.querySelectorAll('.bm-subtab').forEach(b => b.classList.remove('active'));
+    panel.style.display = 'block';
+    parent.querySelector('[data-bvsubtab="' + tabId + '"]').classList.add('active');
+  }
+
+  function openBallValve() {
+    document.getElementById('ballvalveModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBallValve() {
+    document.getElementById('ballvalveModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
   document.addEventListener('DOMContentLoaded', function() {
+    // Blowers
     document.getElementById('industrialCard').addEventListener('click', openBlowers);
     document.getElementById('blowersClose').addEventListener('click', closeBlowers);
     document.getElementById('blowersModal').addEventListener('click', function(e) {
       if (e.target === this) closeBlowers();
     });
-    document.querySelectorAll('.bm-tab').forEach(function(btn) {
+    document.querySelectorAll('#blowersModal .bm-tab').forEach(function(btn) {
       btn.addEventListener('click', function() { switchTab(this.dataset.tab); });
     });
-    document.querySelectorAll('.bm-subtab').forEach(function(btn) {
+    document.querySelectorAll('#blowersModal .bm-subtab').forEach(function(btn) {
       btn.addEventListener('click', function() { switchSubTab(this.dataset.subtab); });
+    });
+
+    // Ball Valve
+    document.getElementById('agricultureCard').addEventListener('click', openBallValve);
+    document.getElementById('ballvalveClose').addEventListener('click', closeBallValve);
+    document.getElementById('ballvalveModal').addEventListener('click', function(e) {
+      if (e.target === this) closeBallValve();
+    });
+    document.querySelectorAll('#ballvalveModal .bv-tabs .bm-tab').forEach(function(btn) {
+      btn.addEventListener('click', function() { switchBvTab(this.dataset.bvtab); });
+    });
+    document.querySelectorAll('#ballvalveModal .bm-subtab').forEach(function(btn) {
+      btn.addEventListener('click', function() { switchBvSubTab(this.dataset.bvsubtab); });
     });
   });
 
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeBlowers();
+    if (e.key === 'Escape') { closeBlowers(); closeBallValve(); }
   });
 
   function handleSubmit(e) {
